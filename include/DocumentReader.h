@@ -9,8 +9,11 @@
 class DocumentReader{
 private:
     std::string m_root;
+    static bool isTextFile(const std::string&);
 public:
     explicit DocumentReader(const std::string&);
+    [[nodiscard]] std::vector<Document> loadAllDocuments()const;
+
 
 };
 
